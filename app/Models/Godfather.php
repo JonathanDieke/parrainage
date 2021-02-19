@@ -10,7 +10,9 @@ class Godfather extends Model
 {
     use HasFactory;
 
-    protected $primaryKey = 'register';
+    // protected $primaryKey = 'register';
+    // protected $primaryKey = null;
+    // public $incrementing = false;
 
     /**
      * Get all of the godchildren for the godfather

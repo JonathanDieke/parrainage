@@ -10,7 +10,9 @@ class Godchild extends Model
 {
     use HasFactory;
 
-    protected $primaryKey = 'register';
+    // protected $primaryKey = 'register';
+    // protected $primaryKey = null;
+    // public $incrementing = false;
 
     /**
      * Get the godfather that owns the Godchild
