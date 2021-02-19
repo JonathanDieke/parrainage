@@ -16,13 +16,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-
-    $godfathers = Godfather::all();
-    $godchildren = Godchild::all();
-
-    return view('welcome', compact("godfathers", "godchildren"));
-})->name('welcome');
+Route::get('/',"welcome")->name('welcome');
 
 Route::post('/parrainage/parrains', function (Request $request ) {
     $godfatherTab = (int) $request->tab;
