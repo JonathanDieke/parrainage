@@ -13,8 +13,7 @@ class AddFkGodchildren extends Migration
      */
     public function up()
     {
-        Schema::create('godchildren', function (Blueprint $table) {
-
+        Schema::table('godchildren', function($table) {
             $table->foreign('godfather_register')
                         ->references('register')
                         ->on('godfathers')
@@ -31,7 +30,7 @@ class AddFkGodchildren extends Migration
      */
     public function down()
     {
-        Schema::create('godchildren', function (Blueprint $table) {
+        Schema::table('godchildren', function (Blueprint $table) {
             $table->dropForeign(['godfather_register']);
         });
     }
