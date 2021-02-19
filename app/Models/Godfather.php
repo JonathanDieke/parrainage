@@ -12,7 +12,7 @@ class Godfather extends Model
 
     protected $primaryKey = 'register';
     // protected $primaryKey = null;
-    // public $incrementing = false;
+    public $incrementing = false;
 
     /**
      * Get all of the godchildren for the godfather
