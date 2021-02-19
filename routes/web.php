@@ -16,9 +16,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/'," function () {
+Route::get('/', function () {
     return view('welcome');
-}")->name('welcome');
+})->name('welcome');
 
 Route::post('/parrainage/parrains', function (Request $request ) {
     $godfatherTab = (int) $request->tab;
