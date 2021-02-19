@@ -103,7 +103,7 @@ class DatabaseSeeder extends Seeder
 
             //associer filleul et parrain
             $godChild = new Godchild($son);
-            $godChild->godfather()->associate($godfather);
+            $godChild->godfather_register = $godfather->register;
             $godChild->save();
 
             //delete filleul got by index
@@ -117,7 +117,7 @@ class DatabaseSeeder extends Seeder
             $indexSon = array_rand($godson);
             $son = $godson[$indexSon];
             $godChild = new Godchild($son);
-            $godChild->godfather()->associate($godfathers->random());
+            $godChild->godfather_register = $godfathers->random()->register;
             $godChild->save();
             unset($godson[$indexSon]);
         }
