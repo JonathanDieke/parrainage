@@ -4,7 +4,9 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="{{ asset('css/bootstrap.css') }}">
-        <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/all.css') }}">
+
+        <link rel="shortcut icon" href="{{ asset('img/favicon.png') }}" type="image/x-icon">
 
         <title>GL Label</title>
 
@@ -22,28 +24,26 @@
                 height: 100%;
             }
 
-            .typewriter {
-                overflow: hidden; /* Ensures the content is not revealed until the animation */
-                border-right: .15em solid orange; /* The typwriter cursor */
-                white-space: nowrap; /* Keeps the content on a single line */
-                margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-                letter-spacing: .15em; /* Adjust as needed */
+            /* .typewriter {
+                overflow: hidden;
+                border-right: .15em solid orange;
+                white-space: nowrap;
+                margin: 0 auto;
+                letter-spacing: .15em;
                 animation:
                     typing 3s steps(40, end),
                     blink-caret .75s step-end infinite;
             }
 
-            /* The typing effect */
             @keyframes typing {
                 from { width: 0 }
                 to { width: 100% }
             }
 
-            /* The typewriter cursor effect */
             @keyframes blink-caret {
                 from, to { border-color: transparent }
                 50% { border-color: black; }
-            }
+            } */
         </style>
 
         @livewireStyles
@@ -67,28 +67,39 @@
 
         </main>
 
+        <footer>
+            <div class="alert my-2">
+                <h3 class="fst-italic fw-bold text-center pt-4 small @if(Route::is("welcome")) {{ 'fixed-bottom' }} @endif " style="font-family: Geneva"><i class="fas fa-code"></i> with <i class="fas fa-heart"></i> by Jonathan Dieke</h3>
+            </div>
+        </footer>
+
 
         <script src="{{ asset('js/jquery.js') }}"></script>
         <script src="{{ asset('js/bootstrap.bundle.js') }}"></script>
         <script src="{{ asset('js/bootstrap.js') }}"></script>
         <script src="{{ asset('js/particles.js') }}"></script>
         <script src="{{ asset('js/app.js') }}"></script>
+
+        @if (isset($godfatherTab) && !$godfatherTab)
+            <script src="{{ asset('js/scripts.js') }}" defer></script>
+        @endif
+
         <script >
-            // $(() => {
-            //     var i = 0;
-            //     var txt = 'PARRAINAGE GL - ESATIC';
-            //     var speed = 50;
+            $(() => {
+                var i = 0;
+                var txt = 'PARRAINAGE GL - ESATIC';
+                var speed = 50;
 
-            //     function typeWriter() {
-            //         if (i < txt.length) {
-            //             document.getElementById("title").innerHTML += txt.charAt(i);
-            //             i++;
-            //             setTimeout(typeWriter, speed);
-            //         }
-            //     }
+                function typeWriter() {
+                    if (i < txt.length) {
+                        document.getElementById("title").innerHTML += txt.charAt(i);
+                        i++;
+                        setTimeout(typeWriter, speed);
+                    }
+                }
 
-            //     typeWriter()
-            // })
+                typeWriter()
+            })
         </script>
 
         @livewireScripts

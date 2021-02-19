@@ -3,8 +3,8 @@
 
 @section('content')
 
-    <div class="title h1 text-center typewriter " style="font-family: Verdana, Geneva, Tahoma, sans-serif">
-        <p>PARRAINAGE GL - ESATIC</p>
+    <div class="title h1 text-center typewriter " style="font-family:  Geneva, Tahoma, sans-serif" id="title">
+        {{-- <p>PARRAINAGE GL - ESATIC</p> --}}
     </div>
 
     <div class="description mx-auto text-center ">
@@ -18,7 +18,16 @@
     </div>
 
     <div class="buttons d-flex justify-content-center mt-4" style="width: 100%">
-        <a href="{{ route('parrainage.parrains') }}" class="btn btn-outline-secondary btn-lg m-1">Parrains</a>
-        <a href="{{ route('parrainage.parrains') }}" class="btn btn-outline-info btn-lg m-1">Filleuls</a>
+        <form action="{{ route('parrainage.parrains')  }}" method="POST">
+            @csrf
+            <input type="hidden" name="tab" value="1">
+            <button type="submit" class="btn btn-outline-secondary btn-lg m-1">Parrains</button>
+        </form>
+
+        <form action="{{ route('parrainage.parrains')  }}" method="POST">
+            @csrf
+            <input type="hidden" name="tab" value="0">
+            <button type="submit" class="btn btn-outline-info btn-lg m-1">Filleuls</button>
+        </form>
     </div>
 @endsection
