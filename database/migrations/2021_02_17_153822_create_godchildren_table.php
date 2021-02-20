@@ -21,12 +21,12 @@ class CreateGodchildrenTable extends Migration
             $table->timestamps();
 
             $table->primary('register');
-            // $table->foreign('godfather_register')
-            //             ->references('register')
-            //             ->on('godfathers')
-            //             ->onUpdate('cascade')
-            //             ->onDelete('cascade')
-            //             ->nullable();
+            $table->foreign('godfather_register')
+                        ->references('register')
+                        ->on('godfathers')
+                        ->onUpdate('cascade')
+                        ->onDelete('cascade')
+                        ->nullable();
         });
     }
 

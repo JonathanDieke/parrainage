@@ -1,3 +1,4 @@
 $(() => {
     $("#godchrildren-tab").click()
+
 })

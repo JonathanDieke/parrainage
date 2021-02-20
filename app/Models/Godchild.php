@@ -12,7 +12,7 @@ class Godchild extends Model
 
     protected $primaryKey = 'register';
     // protected $primaryKey = null;
-    // public $incrementing = false;
+    public $incrementing = false;
 
     /**
      * Get the godfather that owns the Godchild

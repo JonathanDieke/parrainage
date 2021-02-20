@@ -2,9 +2,8 @@
 @extends('layouts.app')
 
 @section('content')
-
     <div class="title h1 text-center typewriter " style="font-family:  Geneva, Tahoma, sans-serif" id="title">
-        {{-- <p>PARRAINAGE GL - ESATIC</p> --}}
+
     </div>
 
     <div class="description mx-auto text-center ">
