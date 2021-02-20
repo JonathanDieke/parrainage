@@ -27,3 +27,10 @@ Route::post('/parrainage/parrains', function (Request $request ) {
 
     return view('parrainage/parrains', compact("godfathers", "godfatherTab"));
 })->name('parrainage.parrains');
+
+// Route::get('/parrainage/filleuls', function () {
+
+//     $godchildren = godchild::all();
+
+//     return view('parrainage/filleuls', compact("godchildren"));
+// })->name('parrainage.filleuls');

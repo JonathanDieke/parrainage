@@ -1,4 +1,4 @@
-@extends('layouts.app', ['godfatherTab' => $godfatherTab])
+@extends('layouts.app')
 
 @section('content')
     <livewire:sponsorship-list :godfathers="$godfathers">
