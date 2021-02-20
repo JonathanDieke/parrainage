@@ -76,7 +76,7 @@
 
         <footer>
             <div class="alert my-2">
-                <h3 class="fst-italic fw-bold text-center pt-4 small @if(Route::is("welcome")) {{ 'fixed-bottom' }} @endif " style="font-family: Geneva"><i class="fas fa-code"></i> with <i class="fas fa-heart"></i> by Jonathan Dieke</h3>
+                <h3 class="fst-italic fw-bold text-center pt-4 small " style="font-family: Geneva"><i class="fas fa-code"></i> with <i class="fas fa-heart"></i> by Jonathan Dieke</h3>
             </div>
         </footer>
 
