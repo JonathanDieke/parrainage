@@ -23,7 +23,7 @@ particlesJS('particles-js',
         }
       },
       "color": {
-        "value": "#FFF" //color for point
+        "value": "#3c94ff" //color for point
       },
       "shape": {
         "type": "circle",
@@ -63,7 +63,7 @@ particlesJS('particles-js',
       "line_linked": {
         "enable": true,
         "distance": 200,
-        "color": "FFF", //orange code couleur for branch
+        "color": "CCF", //orange code couleur for branch
         "opacity": 0.4,
         "width": 1.6
       },

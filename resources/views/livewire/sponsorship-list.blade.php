@@ -1,24 +1,27 @@
 <div class="mx-auto">
 
-     {{-- <div class=" block">
-        <input class="form-control" type="text" placeholder="Saisissez votre matricule" wire:model="q" aria-label="default input example">
-    </div> <br> --}}
+    {{--  <div>
+        <div class="form-floating mb-3  float-end">
+            <input type="search" class="form-control" wire:keydown.enter="search">
+            <label for="floatingInput">Entrez votre matricule</label>
+        </div>
+    </div>  --}}
 
-    <ul class="nav nav-tabs" id="tabList" role="tablist">
+    <ul class="nav nav-tabs" id="tabList" role="tablist" style="clear: both">
         <li class="nav-item" role="presentation">
-          <button  class="nav-link  {{ $activeClass ?"active" : "" }}" id="godfathers-tab" data-bs-toggle="tab" data-bs-target="#godfathers" type="button" role="tab" aria-selected="true">
+          <button  class="nav-link  active" id="godfathers-tab" data-bs-toggle="tab" data-bs-target="#godfathers" type="button" role="tab" aria-selected="true">
             Parrains <i class="fab fa-jedi-order"></i>
         </button>
         </li>
         <li class="nav-item" role="presentation">
-          <button  class="nav-link {{ $activeClass ? '' : "active" }}" id="godchrildren-tab" data-bs-toggle="tab" data-bs-target="#godchrildren" type="button" role="tab" aria-selected="false">
+          <button  class="nav-link " id="godchrildren-tab" data-bs-toggle="tab" data-bs-target="#godchrildren" type="button" role="tab" aria-selected="false">
             Filleuls <i class="fab fa-first-order"></i>
         </button>
         </li>
       </ul>
 
       <div class="tab-content" id="myTabContent">
-        <div class="tab-pane fade {{ $activeClass ? " show active" : "" }}" id="godfathers" role="tabpanel" aria-labelledby="godfathers-tab">
+        <div class="tab-pane fade show active" id="godfathers" role="tabpanel" aria-labelledby="godfathers-tab">
             <table class="table table-hover table-striped caption-top">
                 <caption>Liste des parrains</caption>
                 <thead>
@@ -46,7 +49,7 @@
                 </tbody>
             </table>
         </div>
-        <div class="tab-pane fade {{ $activeClass ? "" : "show active" }}" id="godchrildren" role="tabpanel" aria-labelledby="godchrildren-tab">
+        <div class="tab-pane fade" id="godchrildren" role="tabpanel" aria-labelledby="godchrildren-tab">
             <table class="table table-hover table-striped caption-top">
                 <caption>Liste des filleuls</caption>
                 <thead>

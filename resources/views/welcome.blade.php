@@ -1,6 +1,8 @@
 
 @extends('layouts.app')
 
+@section('title', 'Accueil')
+
 @section('content')
 
     <div class="title h1 text-center typewriter " style="font-family:  Geneva, Tahoma, sans-serif" id="title">
@@ -18,16 +20,7 @@
     </div>
 
     <div class="buttons d-flex justify-content-center mt-4" style="width: 100%">
-        <form action="{{ route('parrainage.parrains')  }}" method="POST">
-            @csrf
-            <input type="hidden" name="tab" value="1">
-            <button type="submit" class="btn btn-outline-secondary btn-lg m-1">Parrains</button>
-        </form>
-
-        <form action="{{ route('parrainage.parrains')  }}" method="POST">
-            @csrf
-            <input type="hidden" name="tab" value="0">
-            <button type="submit" class="btn btn-outline-info btn-lg m-1">Filleuls</button>
-        </form>
+        <a href="{{ route('sponsorship.relationship', "godfathers") }}" class="btn btn-outline-secondary btn-lg m-1"> Parrains</a>
+        <a href="{{ route('sponsorship.relationship', "godchildren") }}" class="btn btn-outline-info btn-lg m-1"> Filleuls</a>
     </div>
 @endsection

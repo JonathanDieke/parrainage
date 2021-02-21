@@ -2,7 +2,6 @@
 
 use App\Models\Godchild;
 use App\Models\Godfather;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,17 +19,15 @@ Route::get('/', function () {
     return view('welcome');
 })->name('welcome');
 
-Route::post('/parrainage/parrains', function (Request $request ) {
-    $godfatherTab = (int) $request->tab;
+
+Route::get('/sponsorship/{relationship}', function () {
 
     $godfathers = Godfather::all();
+    $godchildren = Godchild::all();
 
-    return view('parrainage/parrains', compact("godfathers", "godfatherTab"));
-})->name('parrainage.parrains');
+    return view('sponsorship/relationship', compact('godfathers', 'godchildren'));
 
-// Route::get('/parrainage/filleuls', function () {
+})->where(['relationship' => '[a-z]{10,11}'])
+    ->name('sponsorship.relationship');
 
-//     $godchildren = godchild::all();
 
-//     return view('parrainage/filleuls', compact("godchildren"));
-// })->name('parrainage.filleuls');
