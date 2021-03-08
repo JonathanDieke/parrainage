@@ -123,7 +123,6 @@
             </script>
         @endif
 
-        @if (Route::is('welcome'))
         @if(Route::is('welcome'))
             <script >
                 $(() => {
