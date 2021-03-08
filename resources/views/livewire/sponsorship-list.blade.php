@@ -21,7 +21,12 @@
       </ul>
 
       <div class="tab-content" id="myTabContent">
+<<<<<<< HEAD
         <div class="tab-pane fade show active" id="godfathers" role="tabpanel" aria-labelledby="godfathers-tab">
+=======
+          
+        <div class="tab-pane fade {{ $activeClass ? " show active" : "" }}" id="godfathers" role="tabpanel" aria-labelledby="godfathers-tab">
+>>>>>>> tests
             <table class="table table-hover table-striped caption-top">
                 <caption>Liste des parrains</caption>
                 <thead>
@@ -49,7 +54,12 @@
                 </tbody>
             </table>
         </div>
+<<<<<<< HEAD
         <div class="tab-pane fade" id="godchrildren" role="tabpanel" aria-labelledby="godchrildren-tab">
+=======
+
+        <div class="tab-pane fade {{ $activeClass ? "" : "show active" }}" id="godchrildren" role="tabpanel" aria-labelledby="godchrildren-tab">
+>>>>>>> tests
             <table class="table table-hover table-striped caption-top">
                 <caption>Liste des filleuls</caption>
                 <thead>

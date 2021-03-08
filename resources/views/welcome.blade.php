@@ -1,7 +1,10 @@
-
 @extends('layouts.app')
 
+<<<<<<< HEAD
 @section('title', 'Accueil')
+=======
+@section('title', "Accueil")
+>>>>>>> tests
 
 @section('content')
 
@@ -20,7 +23,19 @@
     </div>
 
     <div class="buttons d-flex justify-content-center mt-4" style="width: 100%">
+<<<<<<< HEAD
         <a href="{{ route('sponsorship.relationship', "godfathers") }}" class="btn btn-outline-secondary btn-lg m-1"> Parrains</a>
         <a href="{{ route('sponsorship.relationship', "godchildren") }}" class="btn btn-outline-info btn-lg m-1"> Filleuls</a>
+=======
+
+        <a href="{{ route('sponsorship.relationship', ["relationship" => "godfathers"]) }}"class="btn btn-outline-secondary btn-lg m-1">
+            Parrains
+        </a>
+
+        <a href="{{ route('sponsorship.relationship', ["relationship" => "godchildren"]) }}"class="btn btn-outline-info btn-lg m-1">
+            Filleuls
+        </a>
+
+>>>>>>> tests
     </div>
 @endsection
