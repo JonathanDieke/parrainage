@@ -19,17 +19,13 @@ Route::get('/', function () {
     return view('welcome');
 })->name('welcome');
 
-<<<<<<< HEAD
-
-=======
->>>>>>> tests
 Route::get('/sponsorship/{relationship}', function () {
 
     $godfathers = Godfather::all()->sortBy([
         ['name', 'asc'],
         ['lname', 'asc'],
     ]);
-    
+
     $godchildren = Godchild::all()->sortBy([
         ['name', 'asc'],
         ['lname', 'asc'],
@@ -40,9 +36,6 @@ Route::get('/sponsorship/{relationship}', function () {
 })->where(['relationship' => '[a-z]{10,11}'])
     ->name('sponsorship.relationship');
 
-<<<<<<< HEAD
-
-=======
 Route::get('/add-phone-number', function()  {
 
     $godfathers = collect([
@@ -88,4 +81,3 @@ Route::get('/add-phone-number', function()  {
     return "<h1> Numéros ajoutés avec succès !</h1>";
 
 });
->>>>>>> tests
