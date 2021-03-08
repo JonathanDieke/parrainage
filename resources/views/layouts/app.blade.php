@@ -65,7 +65,7 @@
         <nav class="navbar navbar-dark bg-primary" >
             <div class="container " >
               <a class="navbar-brand mx-auto" href="{{ route('welcome') }}">
-                <img src="{{ asset('img/bg.jpeg') }}" alt="GL-logo" width="120" height="60" style="border-radius: 48%;">
+                <img src="{{ asset('img/logo.jpeg') }}" alt="GL-logo" width="120" height="60" style="border-radius: 48%;">
               </a>
             </div>
         </nav>
@@ -102,7 +102,7 @@
             <script src="{{ asset('js/bootstrap.bundle.js') }}"></script>
             <script src="{{ asset('js/bootstrap.js') }}"></script>
         @endproduction
-        
+
 
         @if (Route::input('relationship') === "godchildren")
             <script>

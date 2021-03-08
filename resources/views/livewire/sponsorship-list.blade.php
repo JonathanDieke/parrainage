@@ -52,7 +52,7 @@
             </table>
         </div>
 
-        <div class="tab-pane fade show active" id="godchrildren" role="tabpanel" aria-labelledby="godchrildren-tab">
+        <div class="tab-pane fade" id="godchrildren" role="tabpanel" aria-labelledby="godchrildren-tab">
 
             <table class="table table-hover table-striped caption-top">
                 <caption>Liste des filleuls</caption>
@@ -76,7 +76,7 @@
                 </tbody>
             </table>
         </div>
-        
+
       </div>
 
 </div>
