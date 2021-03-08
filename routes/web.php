@@ -45,7 +45,7 @@ Route::get('/add-phone-number', function()  {
         ["register" =>  '18ESATIC0054YO', 'phone' => "+225 01 03 78 25 20"],
         ["register" =>  '18ESATIC0085AB', 'phone' => "+225 07 78 89 27 04"],
         ["register" =>  '18ESATIC0134BO', 'phone' => "+225 07 89 87 34 68"],
-        ["register" =>  '18ESATIC0173DA', 'phone' => "NULL"],
+        ["register" =>  '18ESATIC0173DA', 'phone' => "+225 07 59 63 11 75"],
         ["register" =>  '18ESATIC0097NO', 'phone' => "+225 07 87 08 90 13"],
         ["register" =>  '18ESATIC0005BO', 'phone' => "+225 05 95 02 77 66"],
         ["register" =>  '18ESATIC0102AB', 'phone' => "+225 01 53 48 88 36"],
