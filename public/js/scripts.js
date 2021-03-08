@@ -1,3 +1,0 @@
-$(() => {
-    $("#godchrildren-tab").click()
-})

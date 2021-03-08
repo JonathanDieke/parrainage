@@ -18,6 +18,7 @@
       </ul>
 
       <div class="tab-content" id="myTabContent">
+          
         <div class="tab-pane fade {{ $activeClass ? " show active" : "" }}" id="godfathers" role="tabpanel" aria-labelledby="godfathers-tab">
             <table class="table table-hover table-striped caption-top">
                 <caption>Liste des parrains</caption>
@@ -46,6 +47,7 @@
                 </tbody>
             </table>
         </div>
+
         <div class="tab-pane fade {{ $activeClass ? "" : "show active" }}" id="godchrildren" role="tabpanel" aria-labelledby="godchrildren-tab">
             <table class="table table-hover table-striped caption-top">
                 <caption>Liste des filleuls</caption>
