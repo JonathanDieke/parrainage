@@ -22,9 +22,13 @@
 
       <div class="tab-content" id="myTabContent">
 <<<<<<< HEAD
+<<<<<<< HEAD
         <div class="tab-pane fade show active" id="godfathers" role="tabpanel" aria-labelledby="godfathers-tab">
 =======
-          
+
+=======
+
+>>>>>>> tests
         <div class="tab-pane fade {{ $activeClass ? " show active" : "" }}" id="godfathers" role="tabpanel" aria-labelledby="godfathers-tab">
 >>>>>>> tests
             <table class="table table-hover table-striped caption-top">
@@ -40,7 +44,7 @@
                     @foreach ($godfathers as $godfather)
                         <tr>
                             <th scope="row">{{ $loop->iteration }}</th>
-                            <td>{{ $godfather->name }} {{ $godfather->lname }}</td>
+                            <td>{{ $godfather->name }} {{ $godfather->lname }} ({{ $godfather->phone }})</td>
                                 <td>
                                     @foreach ($godfather->godchildren as $godchild)
                                         @if (! $loop->first)
@@ -56,7 +60,7 @@
         </div>
 <<<<<<< HEAD
         <div class="tab-pane fade" id="godchrildren" role="tabpanel" aria-labelledby="godchrildren-tab">
-=======
+======
 
         <div class="tab-pane fade {{ $activeClass ? "" : "show active" }}" id="godchrildren" role="tabpanel" aria-labelledby="godchrildren-tab">
 >>>>>>> tests
@@ -75,7 +79,7 @@
                             <th scope="row">{{ $loop->iteration }}</th>
                             <td>{{ $godchild->name }} {{ $godchild->lname }}</td>
                             <td>
-                                {{ $godchild->godfather->name }} {{ $godchild->godfather->lname }}
+                                {{ $godchild->godfather->name }} {{ $godchild->godfather->lname }} ({{ $godchild->godfather->phone }})
                             </td>
                         </tr>
                     @endforeach

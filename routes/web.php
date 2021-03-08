@@ -25,8 +25,15 @@ Route::get('/', function () {
 >>>>>>> tests
 Route::get('/sponsorship/{relationship}', function () {
 
-    $godfathers = Godfather::all();
-    $godchildren = Godchild::all();
+    $godfathers = Godfather::all()->sortBy([
+        ['name', 'asc'],
+        ['lname', 'asc'],
+    ]);
+    
+    $godchildren = Godchild::all()->sortBy([
+        ['name', 'asc'],
+        ['lname', 'asc'],
+    ]);
 
     return view('sponsorship/relationship', compact('godfathers', 'godchildren'));
 
